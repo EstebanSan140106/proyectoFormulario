@@ -1,0 +1,155 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #1A3C5A; /* Fondo azul oscuro */
+    color: #1C2526; /* Negro más oscuro para mejor contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: #F5F7FA; /* Fondo blanco suave */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Título del formulario */
+h2 {
+    font-size: 1.8rem;
+    color: #1C2526;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo de etiquetas y campos */
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #1C2526;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #D3DCE6; /* Borde gris claro */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #1C2526;
+    background-color: #fff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4A90E2; /* Azul claro al enfocar */
+}
+
+/* Estilo para inputs con value no vacío */
+input:not([value=""]):not(:focus) {
+    background-color: #E8F0FE; /* Fondo azul muy claro para resaltar */
+    border-color: #4A90E2; /* Borde azul claro */
+}
+
+/* Estilo para select con una opción seleccionada distinta de la predeterminada */
+select:not([value=""]):not(:focus) {
+    background-color: #E8F0FE; /* Fondo azul muy claro para resaltar */
+    border-color: #4A90E2; /* Borde azul claro */
+}
+
+/* Estilo para checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #1C2526;
+}
+
+/* Resaltar checkboxes seleccionados */
+.checkbox-group input[type="checkbox"]:checked + label {
+    color: #4A90E2; /* Texto azul claro cuando está seleccionado */
+    font-weight: bold;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: #E63946; /* Rojo suave */
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Botones */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #1C2526;
+}
+
+button[type="submit"] {
+    background-color: #4A90E2;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #357ABD;
+}
+
+button[type="reset"] {
+    background-color: #D3DCE6;
+    color: #1C2526;
+}
+
+button[type="reset"]:hover {
+    background-color: #B0BEC5;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}

@@ -14,13 +14,14 @@
 <html lang="en">
 <head>
     <link href="<%=request.getContextPath()%>/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="bootstrap.min.css" rel="stylesheet"/>
     <title>Formulario de usuario</title>
 </head>
 <body>
-<h3>Formulario de Usuario</h3>
 
 <div>
     <form action="/proyectoFormulario/registro" method="post">
+<h3>Formulario de Usuario</h3>
         <div>
             <label for="username">Usuario:</label>
             <div>
